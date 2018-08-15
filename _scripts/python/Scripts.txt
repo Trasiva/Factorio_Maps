@@ -1,3 +1,3 @@
-cd /mnt/c/Users/codyu/AppData/Roaming/Factorio/script-output/New_Map
-ls s_*.jpg | nice xargs -n100 -P8 /mnt/d/Documents/factorio-screenshots-master/slice.py
-/mnt/d/Documents/factorio-screenshots-master/shrink.py
+cd /mnt/c/Users/Trasiva/AppData/Roaming/Factorio/script-output/New_Map
+ls s_*.jpg | nice xargs -n100 -P8 DIR/python/slice.py
+DIR/python/shrink.py

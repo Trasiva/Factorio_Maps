@@ -20,11 +20,13 @@
       var tileUrl = '{id}/{z}/{x}/{y}.jpg';
 
       var layers = {};
+      //This should be the list of names, sans the chosen prefix.
       var names = ['14_July'];
 
       for (i = 0; i < names.length; i++) {
         var name = names[i];
         layers[name] = L.tileLayer(tileUrl, {
+          //Update this this with the appropriate prefix
           id: 'map_' + name,
           minZoom: 1,
           maxZoom: 11,
