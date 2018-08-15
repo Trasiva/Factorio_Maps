@@ -1,0 +1,47 @@
+<html style="height: 100%;">
+  <head>
+    <style>
+      html, body {
+        height: 100%;
+        margin: 0 0 0 0;
+      }
+    </style>
+    <title>Factorio Base</title>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="node_modules/leaflet/dist/leaflet.css" />
+  </head>
+
+  <body>
+    <div id="map" style="width: 100%; height: 100%;"></div>
+    <script src="node_modules/leaflet/dist/leaflet.js"></script>
+    <script>
+      var tileUrl = '{id}/{z}/{x}/{y}.jpg';
+
+      var layers = {};
+      var names = ['14_July'];
+
+      for (i = 0; i < names.length; i++) {
+        var name = names[i];
+        layers[name] = L.tileLayer(tileUrl, {
+          id: 'map_' + name,
+          minZoom: 1,
+          maxZoom: 11,
+          errorTileUrl: '/public/images/empty.png',
+        });
+      }
+
+      var map = L.map('map', {
+        layers: [layers['14_July']],
+        fadeAnimation: false,
+      });
+
+      L.control.layers(layers, {}, {collapsed: false}).addTo(map);
+
+      map.fitBounds([
+        [1.45004, -4.41101],
+        [-3.57921, 4.16931]]);
+    </script>
+  </body>
+</html>
