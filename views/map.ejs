@@ -17,11 +17,23 @@
     <div id="map" style="width: 100%; height: 100%;"></div>
     <script src="node_modules/leaflet/dist/leaflet.js"></script>
     <script>
-      var tileUrl = '{id}/{z}/{x}/{y}.jpg';
+      const foundLayers = '<%= myLayers %>'.split(',');
+      const prefix = 'map_';
+      var tileUrl = 'Layers/{id}/{z}/{x}/{y}.jpg';
 
       var layers = {};
       //This should be the list of names, sans the chosen prefix.
-      var names = ['14_July'];
+      var names =foundLayers.map( (name) => name.replace(prefix, ''));
+
+      names.sort( (a,b) => {
+        const splitA = a.split('_');
+        const splitB = b.split('_');
+
+        const dateA = new Date(`${splitA[1]} ${splitA[0]}, ${splitA[2]}`);
+        const dateB = new Date(`${splitB[1]} ${splitB[0]}, ${splitB[2]}`);
+
+        return dateA === dateB ? splitA[3] - splitB[3] : dateA - dateB;
+      });
 
       for (i = 0; i < names.length; i++) {
         var name = names[i];
@@ -30,12 +42,12 @@
           id: 'map_' + name,
           minZoom: 1,
           maxZoom: 11,
-          errorTileUrl: '/public/images/empty.png',
+          errorTileUrl: 'images/empty.png',
         });
       }
 
       var map = L.map('map', {
-        layers: [layers['14_July']],
+        layers: [layers[names[0]]],
         fadeAnimation: false,
       });
 

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Cody's Soap List</title>
+    <link rel="stylesheet" href="css/soaps.css" />
+  </head>
+  <body>
+    <h2>Soaaaaaaaaaaap</h2>
+    <p>Hover over any soap to get the name, maker, and scents.</p>
+
+    <div class="soap_container">
+    <%   for (const soap in mySoaps) { %>
+      <div class="soap_tile_container" data-soapid="<%= soap %>"></div>
+    <% } %>
+    </div>
+
+    <!-- Load React. -->
+
+    <!-- Note: when dep loying, replace "development.js" with "production.min.js". -->
+    <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+
+    <!-- Load our React component. -->
+    <script src="soap_info.js"></script>
+    <script>
+      const containers = document.querySelectorAll('.soap_tile_container');
+
+      if (containers.length > 0) {
+        for (const div of containers) {
+          div.addEventListener('mouseenter', function() {ShowInfo(div)}, false)
+          div.addEventListener('mouseleave', function() {HideInfo(div)}, false)
+        }
+      }
+
+      function ShowInfo(container) {
+        const img = container.querySelector('img');
+
+        if (img) {
+          img.classList.add('imgVis');
+        }
+
+        const info = container.querySelectorAll('h2, label');
+
+        if (info.length > 0) {
+          for (const item of info) {
+            item.classList.remove('hideInfo');
+          }
+        }
+      }
+
+      function HideInfo(container) {
+        const img = container.querySelector('img');
+
+        if (img) {
+          img.classList.remove('imgVis');
+        }
+
+        const info = container.querySelectorAll('h2, label');
+
+        if (info.length > 0) {
+          for (const item of info) {
+            item.classList.add('hideInfo');
+          }
+        }
+      }
+    </script>
+
+  </body>
+</html>

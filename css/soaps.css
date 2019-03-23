@@ -1,0 +1,48 @@
+.soap_container {
+    columns: 3;
+    width: 1000px;
+    column-rule: 1px dotted #ddd;
+}
+
+.soap_tile_container {
+    position: relative;
+    height: 300px;
+    width:300px;
+    overflow: auto;
+    margin-bottom: 20px;
+}
+
+img {
+    position:absolute;
+    height: 300px;
+    width:300px;
+}
+
+.name {
+    position: absolute;
+    top:0px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.maker {
+    position: absolute;
+    top:40%;
+    text-align:center;
+    width: 100%
+}
+
+.scent {
+    position: absolute;
+    top:80%;
+    text-align:center;
+    width: 100%;
+}
+
+.imgVis {
+    opacity: 0.1;
+}
+
+.hideInfo {
+    display: none;
+}

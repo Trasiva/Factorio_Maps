@@ -1,0 +1,52 @@
+{
+	"hallows": {
+		"Maker": "Barrister and Mann",
+		"Scent": "vetiver, oakmoss, black pepper, cocoa, labdanum, and cedar",
+		"Available": true
+	},
+	"bay_rum": {
+		"Maker": "Barrister and Mann",
+		"Scent": "black strap rum with West Indie bay, sweet orange, cinnamon, and benzoin",
+		"Available": true
+	},
+	"night_music": {
+		"Maker": "Barrister and Mann",
+		"Scent": "vanilla, bergamot, musk, iris, strawberry",
+		"Available": true
+	},
+	"42": {
+		"Maker": "Barrister and Mann",
+		"Scent": "petunias, ambergris, tea, pan-galatic gargle blaster",
+		"Available": true
+	},
+	"roam": {
+		"Maker": "Barrister and Mann",
+		"Scent": "tobacco, thyme, grass, damp earth, wood smoke",
+		"Available": true
+	},
+	"beaudelaire": {
+		"Maker": "Barrister and Mann",
+		"Scent": "fern, mousse de saxe, ylang ylang, sandlewood",
+		"Available": true
+	},
+	"cologne_russe": {
+		"Maker": "Barrister and Mann",
+		"Scent": "lemon, bergamot, petitgrain, herbs, violet, rose, bay, and amber ",
+		"Available": true
+	},
+	"rhapsody": {
+		"Maker": "Barrister and Mann",
+		"Scent": "blossom, citrus, herbs",
+		"Available": true
+	},
+	"midnight_stag": {
+		"Maker": "Chisled Face",
+		"Scent": "russian leather, motor oil, hoppes #9, birch tar, oakmoss, gasoline, smoke, cedar, cade, bergamont, vanilla",
+		"Available": true
+	},
+	"puzzle": {
+		"Maker": "L&L Grooming",
+		"Scent": "neroli, cedar, rosewood, tonka bean, blood orange",
+		"Available": true
+	}
+}
