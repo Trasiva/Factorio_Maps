@@ -99,6 +99,11 @@ let soapData = {
 		"Maker": "L&L Grooming",
 		"Scent": "neroli, cedar, rosewood, tonka bean, blood orange",
 		"Available": true
+	},
+	"terror": {
+		"Maker": "Barrister and Mann",
+		"Scent": "frankensense, menthol",
+		"Available": true
 	}
 }
 
